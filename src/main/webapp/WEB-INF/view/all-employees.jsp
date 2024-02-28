@@ -16,8 +16,8 @@
         <th>Operations</th>
     </tr>
     <c:forEach var="emp" items="${allEmps}">
-    <c:url var="updateButton" value="/updateInfo">
-    <c: param name="employeeId" value="${emp.id}">
+        <c:url var="updateButton" value="/updateInfo">
+            <c:param name="employeeId" value="${emp.id}"/>
         </c:url>
         <tr>
             <td>${emp.name}</td>
@@ -28,7 +28,7 @@
                 <input type="button" value="Update" onclick="window.location.href='${updateButton}'"/>
             </td>
         </tr>
-        </c:forEach>
+    </c:forEach>
 </table>
 <br>
 <input type="button" value="Add" onclick="window.location.href='addNewEmployee'"/>
