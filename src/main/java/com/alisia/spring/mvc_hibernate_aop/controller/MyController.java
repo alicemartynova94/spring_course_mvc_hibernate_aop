@@ -39,11 +39,17 @@ public class MyController {
         return "redirect:/";
     }
 
-    @RequestMapping("/updateInfo")
+    @RequestMapping("/updateInfo") 
     public String updateEmployee(@RequestParam("employeeId") int id, Model model) {
         Employee employee = employeeService.getEmployee(id);
         model.addAttribute("employee", employee);
         return "employee-form";
+    }
+
+    @RequestMapping("/deleteEmployee")
+    public String deleteEmployee(@RequestParam("employeeId") int id) {
+        employeeService.deleteEmployee(id);
+        return "redirect:/";
     }
 
 }
