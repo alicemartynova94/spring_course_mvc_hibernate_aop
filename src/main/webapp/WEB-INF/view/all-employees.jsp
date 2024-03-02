@@ -29,8 +29,7 @@
             <td>${emp.salary}</td>
             <td>
                 <input type="button" value="Update" onclick="window.location.href='${updateButton}'"/>
-            </td>
-            <td>
+           
                 <input type="button" value="Delete" onclick="window.location.href='${deleteButton}'"/>
             </td>
         </tr>
